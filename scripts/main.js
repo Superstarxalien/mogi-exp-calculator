@@ -1,9 +1,182 @@
 const button = document.querySelector(`input[type="button"]`);
-const position = document.getElementById("position");
+
+const gradingPoints =
+{
+	0:
+	{
+		laps: "",
+		checkpoints: ""
+	},
+	1: // robotnik coaster
+	{
+		laps: 5,
+		checkpoints: 1
+	},
+	2: // northern district
+	{
+		laps: 4,
+		checkpoints: 1
+	},
+	3: // panic city
+	{
+		laps: 4,
+		checkpoints: 2
+	},
+	4: // sonic speedway
+	{
+		laps: 3,
+		checkpoints: 1
+	},
+	5: // green hills
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	6: // emerald coast
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	7: // storm rig
+	{
+		laps: 3,
+		checkpoints: 1
+	},
+	8: // lucid pass
+	{
+		laps: 4,
+		checkpoints: 1
+	},
+	9: // autumn ring
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	10: // withering chateau
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	11: // popcorn factory
+	{
+		laps: 5,
+		checkpoints: 1
+	},
+	12: // sundae drive
+	{
+		laps: 5,
+		checkpoints: 0
+	},
+	13: // cadillac cascade
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	14: // rumble ridge
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	15: // opulence
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	16: // angel island
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	17: // roasted ruins
+	{
+		laps: 4,
+		checkpoints: 2
+	},
+	18: // obsidian oasis
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	19: // mirage saloon
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	20: // regal ruin
+	{
+		laps: 3,
+		checkpoints: 1
+	},
+	21: // isolated island
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	22: // gigapolis
+	{
+		laps: 4,
+		checkpoints: 1
+	},
+	23: // darkvile castle 1
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	24: // bronze lake
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	25: // collision chaos
+	{
+		laps: 2,
+		checkpoints: 4
+	},
+	26: // emerald hill
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	27: // azure city
+	{
+		laps: 4,
+		checkpoints: 1
+	},
+	28: // gust planet
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	29: // mystic cave
+	{
+		laps: 4,
+		checkpoints: 2
+	},
+	30: // joypolis
+	{
+		laps: 5,
+		checkpoints: 1
+	},
+	31: // hill top
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	32: // marble garden
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	33: // silvercloud island
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+}
 
 function calcExp(pos, isFinalLap) {
-	const numlaps = parseInt(document.getElementById("numlaps").value);
-	const numcheckpoints = parseInt(document.getElementById("numcheckpoint").value);
+	const laps = parseInt(document.getElementById("numlaps").value);
+	const checkpoints = parseInt(document.getElementById("numcheckpoint").value);
 
 	const numplayers = 8;
 	const opponents = numplayers - 1;
@@ -18,7 +191,7 @@ function calcExp(pos, isFinalLap) {
 	const gradingFactorMin = 1 - gradingFactorDrain;
 	const gradingFactorMax = 1 + ((gradingFactorPower * (numplayers - 1)) - gradingFactorDrain);
 
-	const numGradingPoints = (numlaps * (1 + numcheckpoints));
+	const numGradingPoints = (laps * (1 + checkpoints));
 	const numGradingPointsBonus = numGradingPoints * 4/3;
 
 	const targetMinExp = expMin / numGradingPointsBonus;
@@ -36,9 +209,17 @@ function calcExp(pos, isFinalLap) {
 	const mult = numGradingPointsBonus - (numGradingPoints - 1);
 
 	if (isFinalLap)
-		return Math.floor((((1 - currGradingFactor) * targetMinExp) + (currGradingFactor * targetMaxExp)) * mult);
+		return ((((1 - currGradingFactor) * targetMinExp) + (currGradingFactor * targetMaxExp)) * mult);
 	else
-		return Math.floor(((1 - currGradingFactor) * targetMinExp) + (currGradingFactor * targetMaxExp));
+		return (((1 - currGradingFactor) * targetMinExp) + (currGradingFactor * targetMaxExp));
+}
+
+trackpresets.onclick = () => {
+	const value = parseInt(document.getElementById("trackpresets").value);
+	const laps = gradingPoints[value].laps;
+	const checkpoints = gradingPoints[value].checkpoints;
+	numlaps.value = laps;
+	numcheckpoint.value = checkpoints;
 }
 
 button.addEventListener("click", updateButton);
