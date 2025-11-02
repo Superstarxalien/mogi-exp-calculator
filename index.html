@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta charset="UTF-8">
+	<main>
+		<head>
+			<title>Mogi EXP Calculator</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="stylesheet" href="styles.css">
+		</head>
+		<body>
+			<center>
+				<div id="title">Mogi EXP Calculator</div>
+				<div id="description">EXP calculator for a single checkpoint, assuming a total of 8 players and with teamplay disabled</div>
+			</center>
+		</body>
+		<label for="track-presets">
+			Which track do you want to calculate the EXP for? (NOT IMPLEMENTED)
+		</label>
+		<select id="track-presets" name="track-presets">
+			<option value="">Custom</option>
+			<option value=1>Robotnik Coaster Zone</option>
+			<option value=2>Panic City Zone</option>
+		</select>
+		<label for="numlaps">
+			How many laps is the track? (if it's a sprint enter 1)
+		</label>
+		<input type="number" id="numlaps" name="numlaps" placeholder="3" min=1 max=99 required>
+		<label for="numcheckpoint">
+			How many checkpoints does the track have?
+		</label>
+		<input type="number" id="numcheckpoint" name="numcheckpoint" placeholder="0" min=0 max=99 required>
+		<input type="button" id="submit" name="submit" value="Calculate EXP">
+		<div id="grid">
+			<div id="exp" class="exp">
+				Per-checkpoint:<br>1. ???<br>2. ???<br>3. ???<br>4. ???<br>5. ???<br>6. ???<br>7. ???<br>8. ???
+			</div>
+			<div id="expfinallap" class="exp">
+				Final lap:<br>1. ???<br>2. ???<br>3. ???<br>4. ???<br>5. ???<br>6. ???<br>7. ???<br>8. ???
+			</div>
+		</div>
+		<div id="disclaimer">
+			*Calculations may be off by one as this does not faithfully replicate the way Ring Racers stores, calculates, and floors decimals
+		</div>
+		<script src="scripts/main.js"></script>
+	</main>
+</html>
