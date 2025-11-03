@@ -527,6 +527,246 @@ const gradingPoints =
 		laps: 3,
 		checkpoints: 2
 	},
+	105: // espresso lane
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	106: // melty manor
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	107: // leaf storm
+	{
+		laps: 4,
+		checkpoints: 1
+	},
+	108: // lake margorite
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	109: // endless mine 2
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	110: // cyan belltower
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	111: // quartz quadrant
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	112: // aqua tunnel
+	{
+		laps: 3,
+		checkpoints: 1
+	},
+	113: // water palace
+	{
+		laps: 2,
+		checkpoints: 3
+	},
+	114: // final fall
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	115: // haunted ship
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	116: // robotnik winter
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	117: // dragonspire sewer 1
+	{
+		laps: 4,
+		checkpoints: 1
+	},
+	118: // abyss garden
+	{
+		laps: 1,
+		checkpoints: 5
+	},
+	119: // blizzard peaks
+	{
+		laps: 2,
+		checkpoints: 3
+	},
+	120: // vermilion vessel
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	121: // dragonspire sewer 2
+	{
+		laps: 4,
+		checkpoints: 1
+	},
+	122: // chemical facility
+	{
+		laps: 2,
+		checkpoints: 3
+	},
+	123: // coastal temple
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	124: // monkey mall
+	{
+		laps: 5,
+		checkpoints: 1
+	},
+	125: // ramp park
+	{
+		laps: 2,
+		checkpoints: 2
+	},
+	126: // advent angel
+	{
+		laps: 5,
+		checkpoints: 0
+	},
+	127: // pestilence
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	128: // crimson core
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	129: // las vegas
+	{
+		laps: 1,
+		checkpoints: 6
+	},
+	130: // mega collision chaos
+	{
+		laps: 5,
+		checkpoints: 0
+	},
+	131: // mega star light
+	{
+		laps: 5,
+		checkpoints: 0
+	},
+	132: // mega sandopolis
+	{
+		laps: 6,
+		checkpoints: 0
+	},
+	133: // mega aqua lake
+	{
+		laps: 5,
+		checkpoints: 1
+	},
+	134: // mega flying battery
+	{
+		laps: 5,
+		checkpoints: 1
+	},
+	135: // sky babylon
+	{
+		laps: 4,
+		checkpoints: 2
+	},
+	136: // kodachrome void
+	{
+		laps: 4,
+		checkpoints: 1
+	},
+	137: // lavender shrine
+	{
+		laps: 3,
+		checkpoints: 1
+	},
+	138: // hot crater
+	{
+		laps: 2,
+		checkpoints: 3
+	},
+	139: // thunder piston
+	{
+		laps: 2,
+		checkpoints: 3
+	},
+	140: // frozen night
+	{
+		laps: 5,
+		checkpoints: 0
+	},
+	141: // barren badlands
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	142: // shuffle square
+	{
+		laps: 5,
+		checkpoints: 1
+	},
+	143: // blue mountain classic
+	{
+		laps: 3,
+		checkpoints: 1
+	},
+	144: // angel arrow classic
+	{
+		laps: 5,
+		checkpoints: 0
+	},
+	145: // cadillac canyon classic
+	{
+		laps: 4,
+		checkpoints: 1
+	},
+	146: // diamond dust classic
+	{
+		laps: 3,
+		checkpoints: 1
+	},
+	147: // blizzard peaks classic
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	148: // launch base classic
+	{
+		laps: 3,
+		checkpoints: 1
+	},
+	149: // lavender shrine classic
+	{
+		laps: 2,
+		checkpoints: 3
+	},
+	150: // test track
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	151: // hidden palace
+	{
+		laps: 3,
+		checkpoints: 2
+	},
+	152: // route 1980
+	{
+		laps: 1,
+		checkpoints: 5
+	},
 }
 
 function calcExp(pos, isFinalLap) {
