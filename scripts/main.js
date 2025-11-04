@@ -767,6 +767,11 @@ const gradingPoints =
 		laps: 1,
 		checkpoints: 5
 	},
+	153: // death egg (2 laps)
+	{
+		laps: 2,
+		checkpoints: 4
+	},
 }
 
 function calcExp(pos, isFinalLap) {
